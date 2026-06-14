@@ -65,7 +65,7 @@ window.addEventListener('scroll', () => {
     const bottom = top + sec.offsetHeight;
     if (window.scrollY >= top && window.scrollY < bottom) {
       links.forEach(l => l.style.color = '');
-      const active = document.querySelector(.nav-links a[href="#${sec.id}"]);
+      const active = document.querySelector('.nav-links a[href="#${sec.id}"]');
       if (active) active.style.color = '#00d4ff';
     }
   });
