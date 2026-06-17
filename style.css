@@ -195,7 +195,7 @@ section.alt{background:var(--deep);}
   margin-bottom:1rem;
 }
 .learning-banner{
-  display:flex;align-items:center;flex-wrap:wrap;gap:0.5rem;
+  display:block;
   background:rgba(0,212,255,0.05);
   border:1px solid rgba(0,212,255,0.2);
   border-radius:10px;padding:1rem 1.4rem;
@@ -303,6 +303,7 @@ section.alt{background:var(--deep);}
 }
 
 /* EDUCATION */
+
 .edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem;}
 .edu-card{
   background:var(--card);border:1px solid var(--border);
@@ -316,6 +317,19 @@ section.alt{background:var(--deep);}
 .edu-score{font-size:1.4rem;font-weight:700;color:var(--cyan);}
 .edu-score span{font-size:0.75rem;color:var(--muted);font-weight:400;}
 
+.achievement-box{
+    background: rgba(0,212,255,0.05);
+    border: 1px solid rgba(0,212,255,0.2);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    line-height: 1.8;
+}
+
+.achievement-box{
+    color: #00d4ff;
+}
 /* CONTACT */
 .contact-inner{max-width:600px;margin:0 auto;text-align:center;}
 .contact-inner h2{
@@ -351,4 +365,103 @@ footer{
   .nav-links{display:none;}
   .exp-card{grid-template-columns:1fr;}
   .exp-icon{display:none;}
+}
+
+/* Resume Hover Download Button */
+
+.resume-wrapper{
+    position: relative;
+    display: inline-block;
+}
+
+.download-tooltip{
+    position: absolute;
+    left: 50%;
+    top: -45px;
+
+    transform: translateX(-50%);
+    
+    background: rgba(0,212,255,0.1);
+    border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 8px;
+
+    padding: 8px 12px;
+
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Resume Hover Download Button */
+
+.resume-wrapper{
+    position: relative;
+    display: inline-block;
+}
+
+.download-tooltip{
+    position: absolute;
+    left: 50%;
+    top: -45px;
+
+    transform: translateX(-50%);
+
+    background: rgba(0,212,255,0.1);
+    border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 8px;
+
+    padding: 8px 12px;
+
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s ease;
+}
+
+.resume-wrapper:hover .download-tooltip{
+    opacity: 1;
+    visibility: visible;
+    animation: floatTip 2s ease-in-out infinite;
+}
+
+@keyframes floatTip{
+    0%{
+        transform: translateX(-50%) translateY(0);
+    }
+
+    20%{
+        transform: translateX(-50%) translateY(-12px);
+    }
+
+    40%{
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    60%{
+        transform: translateX(-50%) translateY(-8px);
+    }
+
+    80%{
+        transform: translateX(-50%) translateY(6px);
+    }
+
+    100%{
+        transform: translateX(-50%) translateY(0);
+    }
 }

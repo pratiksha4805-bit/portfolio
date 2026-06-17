@@ -8,9 +8,7 @@ document.addEventListener('mousemove', e => {
 // Typewriter animation
 const words = [
   'Frontend Developer.',
-  'UI Designer.',
   'Creative Coder.',
-  'Dancer.',
   'Problem Solver.'
 ];
 let wi = 0, ci = 0, deleting = false;
